@@ -1,7 +1,7 @@
 # projectCaT
 API server (for Youtube and Flickr search)
 
-1 - create virtual environment
+1 - create virtual environment -> 'python -m venv env'
 
 2 - clone repo
 
