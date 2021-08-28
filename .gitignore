@@ -1,0 +1,6 @@
+*/__pycache__/*
+env/
+*/migrations/*
+youtube_flikr_api_master/db.sqlite3
+
+

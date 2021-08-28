@@ -1,0 +1,56 @@
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <!-- Bootstrap CSS -->
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css"
+        integrity="sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u" crossorigin="anonymous">
+
+    <title>Search API</title>
+</head>
+
+<body>
+    <main role="main">
+
+        <section class="jumbotron text-center">
+            <div class="container">
+                <h1 class="jumbotron-heading">Search YouTube & Flickr</h1>
+                <form method="POST">
+
+                    {% csrf_token %}
+                    <input type="text" name="search" class="form-control">
+
+
+                    <div class="container">
+                        <button type="submit" name="submit" value="youtube" class="btn btn-primary my-2">YouTube
+                            Search</button>
+                        <button type="submit" name="submit" value="flickr" class="btn btn-primary my-2">Flickr
+                            Search</button>
+                    </div>
+                </form>
+            </div>
+        </section>
+
+        {% if video_link %}
+        <div class="container">
+            <iframe width="962" height="541" src="{{ video_link }}" title="YouTube video player" frameborder="0"
+                allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture"
+                allowfullscreen></iframe>
+        </div>
+        {% endif %}
+
+        {% if img_link %}
+        <div class="container">
+            <img src="{{ img_link }}" alt="no image" width="962" preserveAspectRatio="xMidYMid slice" focusable="false"
+                role="img">
+        </div>
+        {% endif %}
+
+    </main>
+</body>
+
+</html>
