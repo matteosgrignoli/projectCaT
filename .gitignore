@@ -1,6 +1,8 @@
 */__pycache__/*
 env/
 */migrations/*
-youtube_flikr_api_master/db.sqlite3
+youtube_flickr_api_master/db.sqlite3
+youtube_flickr_api_master/search_api/__pycache__/*
 
+youtube_flickr_api_master/youtube_flikr_api/__pycache__/*
 
